@@ -17,6 +17,7 @@ public class TrainingCenterController {
     @Autowired
     TrainingCenterService service;
 
+
     @PostMapping("/addTrainingCenters")
     public ResponseEntity<TrainingCenter> createTrainingCenters(@Valid @RequestBody TrainingCenter trainingCenter){
 
@@ -28,6 +29,19 @@ public class TrainingCenterController {
     public ResponseEntity<List<TrainingCenter>> fetchTrainingCenters(){
         List<TrainingCenter> trainingCenter=service.fetchTrainingCenter();
         return new ResponseEntity<>(trainingCenter, HttpStatus.OK);
-
     }
+
+    @GetMapping("/filterTrainingCenters")
+    public List<TrainingCenter> getTrainingCenters(
+            @RequestParam(required = false) String centerName,
+            @RequestParam(required = false) String city,
+            @RequestParam(required = false) String state) {
+        return service.findByFilters(centerName, city, state);
+    }
+
+    @GetMapping("/getTrainingCentersByCourse")
+    public List<TrainingCenter> getTrainingCentersByCourse(@RequestParam String course) {
+        return service.findByCourse(course);
+    }
+
 }

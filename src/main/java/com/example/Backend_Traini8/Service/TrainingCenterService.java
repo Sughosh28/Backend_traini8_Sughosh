@@ -38,4 +38,12 @@ public class TrainingCenterService {
 
         return sb.toString();
     }
+
+    public List<TrainingCenter> findByFilters(String centerName, String city, String state) {
+        return repo.findByFilters(centerName, city, state);
+    }
+
+    public List<TrainingCenter> findByCourse(String course) {
+        return repo.findByCourse(course);
+    }
 }

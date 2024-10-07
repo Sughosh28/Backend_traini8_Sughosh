@@ -43,7 +43,6 @@ public class TrainingCenter {
     private Long createdOn;
 
     @Email(message = "Invalid email format.")
-//    @Pattern(regexp="^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+.com", message="Invalid email format.")
     private String contactEmail;
 
     @Pattern(regexp = "^\\d{10}$", message = "Phone number must be exactly 10 digits.")
