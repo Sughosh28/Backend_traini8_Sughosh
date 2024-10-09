@@ -10,6 +10,22 @@ This application is a RESTful API for managing government-funded training center
 
 **Exception Handler is used.**
 
+
+## Configuration
+
+Before running the application, make sure to configure your PostgreSQL database connection. You need to set your database username and password in the `application.properties` file or as environment variables.
+
+### Steps to Configure
+
+1. Open the `src/main/resources/application.properties` file.
+2. Update the following lines with your PostgreSQL credentials:
+
+   ```properties
+   spring.datasource.url=jdbc:postgresql://localhost:5432/MVP_traini8
+   spring.datasource.username=your_username       # Replace with your PostgreSQL username
+   spring.datasource.password=your_password       # Replace with your PostgreSQL password
+
+
 This application runs on port num. 8085
 
 
