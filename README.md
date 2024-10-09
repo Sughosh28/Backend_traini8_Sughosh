@@ -13,7 +13,7 @@ This application is a RESTful API for managing government-funded training center
 
 ## Configuration
 
-Before running the application, make sure to configure your PostgreSQL database connection. You need to set your database username and password in the `application.properties` file or as environment variables.
+Before running the application, make sure to configure your PostgreSQL database connection. You need to set your database username and password in the `application.properties` file.
 
 ### Steps to Configure
 
